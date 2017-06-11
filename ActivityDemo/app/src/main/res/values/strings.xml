@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ActivityDemo</string>
+    <string name="start_activity_explicit">Start Activity Explicit</string>
+    <string name="start_activity_implicit">Start Activity Implicit</string>
+    <string name="started_activity_explicit">Started Activity Implicit</string>
+    <string name="started_activity_implicit">Started Activity Implicit</string>
+</resources>
