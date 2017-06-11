@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         startActivityImplicit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent implicitIntent = new Intent();
+                Intent implicitIntent = new Intent("com.example.xuwanjin.activitydemo.implicitactivity");
                 startActivity(implicitIntent);
             }
         });

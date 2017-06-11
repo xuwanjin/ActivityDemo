@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:process=":MainActivity"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,15 +19,19 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ExplicitActivity">
-            <intent-filter>
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name=".ExplicitActivity"
+            android:process=":xExplicitActivity"
+
+            >
+
         </activity>
 
-        <activity android:name=".ImplicitActivity">
+        <activity android:name=".ImplicitActivity"
+            android:process=":ImplicitActivity"
+            >
             <intent-filter>
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="com.example.xuwanjin.activitydemo.implicitactivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
 
