@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity {
 
     public Button startActivityExplicit;
     public Button startActivityImplicit;
+    public Button startActivityFromBackground;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,5 +35,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(implicitIntent);
             }
         });
+
+        startActivityFromBackground = (Button) findViewById(R.id.start_activity_from_background);
+
+        startActivityFromBackground.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent backgroundIntent = new Intent();
+                backgroundIntent.setClassName(getApplicationContext(), BackgroundService.class.getName());
+                startService(backgroundIntent);
+            }
+        });
+
+
+
     }
 }

@@ -2,6 +2,8 @@
     <string name="app_name">ActivityDemo</string>
     <string name="start_activity_explicit">Start Activity Explicit</string>
     <string name="start_activity_implicit">Start Activity Implicit</string>
-    <string name="started_activity_explicit">Started Activity Implicit</string>
+    <string name="started_activity_explicit">Started Activity Explicit</string>
     <string name="started_activity_implicit">Started Activity Implicit</string>
+    <string name="started_activity_from_background">Started Activity From Background</string>
+    <string name="start_activity_from_background">Start Activity From Background</string>
 </resources>
