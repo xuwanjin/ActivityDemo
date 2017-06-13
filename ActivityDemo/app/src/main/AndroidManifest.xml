@@ -47,11 +47,17 @@
 
         <service
             android:name=".BackgroundService"
-            android:process=":BackgroundService"
-            >
+            android:process=":BackgroundService">
 
         </service>
 
+
+        <activity
+            android:name=".StartForResultActivity"
+            android:launchMode="singleTop"
+            android:process=":StartForResultActivity">
+
+        </activity>
 
     </application>
 
