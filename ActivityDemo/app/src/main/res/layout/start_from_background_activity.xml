@@ -7,7 +7,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/started_activity_from_background"
         android:text="@string/started_activity_from_background"
+        android:textAllCaps="false"
         />
 
 </LinearLayout>

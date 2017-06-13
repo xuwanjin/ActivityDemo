@@ -9,7 +9,7 @@
         android:process=":MainApplication"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
             android:name=".MainActivity"
             android:process=":MainActivity">
@@ -45,7 +45,10 @@
 
         </activity>
 
-        <service android:name=".BackgroundService">
+        <service
+            android:name=".BackgroundService"
+            android:process=":BackgroundService"
+            >
 
         </service>
 

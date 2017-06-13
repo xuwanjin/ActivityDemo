@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.MimeTypeMap;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
@@ -11,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     public Button startActivityExplicit;
     public Button startActivityImplicit;
     public Button startActivityFromBackground;
+    public Button chooseActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +49,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        chooseActivity = (Button) findViewById(R.id.choose_activity);
+        chooseActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent chooseIntent = new Intent();
+                chooseIntent.setType("txt/plain");
+                startActivity(chooseIntent);
+            }
+        });
 
 
     }
