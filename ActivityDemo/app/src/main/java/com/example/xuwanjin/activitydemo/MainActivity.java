@@ -76,11 +76,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        switch (resultCode) {
-            case RESULT_OK: {
-                String s = data.getStringExtra("xuwanjin");
-                Toast.makeText(getApplicationContext(), s, Toast.LENGTH_SHORT).show();
-                break;
+        if (requestCode == startActivityRequestCode) {
+            switch (resultCode) {
+                case RESULT_OK: {
+                    String s = data.getStringExtra("xuwanjin");
+                    Toast.makeText(getApplicationContext(), s, Toast.LENGTH_SHORT).show();
+                    break;
+                }
+                default:
+                    break;
             }
         }
     }

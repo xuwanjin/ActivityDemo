@@ -22,7 +22,11 @@
 
         <activity
             android:name=".ExplicitActivity"
-            android:process=":ExplicitActivity">
+            android:process=":ExplicitActivity"
+            android:documentLaunchMode="intoExisting"
+            android:multiprocess="true"
+            android:launchMode="singleTop"
+            >
 
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />

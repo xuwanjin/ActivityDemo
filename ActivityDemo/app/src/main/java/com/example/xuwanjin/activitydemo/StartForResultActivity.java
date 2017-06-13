@@ -13,9 +13,10 @@ public class StartForResultActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.start_for_result_activity);
         Intent intent = new Intent();
         intent.putExtra("xuwanjin", "hello");
-        setResult(1000,intent);
+        setResult(RESULT_OK,intent);
     }
 
 
