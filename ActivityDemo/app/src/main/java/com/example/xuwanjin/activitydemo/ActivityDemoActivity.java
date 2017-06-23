@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class NotificationDemoActivity extends AppCompatActivity {
+public class ActivityDemoActivity extends AppCompatActivity {
 
     public Button startActivityExplicit;
     public Button startActivityImplicit;
@@ -28,9 +28,6 @@ public class NotificationDemoActivity extends AppCompatActivity {
                 Intent explicitIntent = new Intent();
                 explicitIntent.setClassName(getApplicationContext(),
                         ExplicitActivity.class.getCanonicalName());
-                explicitIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK
-                    | Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT
-                    | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(explicitIntent);
             }
         });
@@ -70,7 +67,6 @@ public class NotificationDemoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_FORWARD_RESULT);
                 intent.setClass(getApplicationContext(), StartForResultActivity.class);
                 startActivityForResult(intent, startActivityRequestCode);
             }
